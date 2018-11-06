@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5Q-2h-09Y">
+                                <rect key="frame" x="39" y="100" width="74" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="D52-va-46Y"/>
+                                    <constraint firstAttribute="width" constant="74" id="tgQ-Iw-zlD"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="dlaudiorecord"/>
+                                <connections>
+                                    <action selector="beginRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sPu-nK-tbu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开始录音" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eas-Ax-x2b">
+                                <rect key="frame" x="41" y="179" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ey2-Mo-Miu">
+                                <rect key="frame" x="41" y="241" width="72" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="kBz-fI-VhC"/>
+                                    <constraint firstAttribute="height" constant="73" id="xWR-Yd-Uxn"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="dlendrecord"/>
+                                <connections>
+                                    <action selector="dlAudioFinishAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E7B-Tj-boJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1L-3U-25Q">
+                                <rect key="frame" x="41" y="382" width="72" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="AIE-AL-VIf"/>
+                                    <constraint firstAttribute="height" constant="73" id="hoD-sm-d9T"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="dlsynthetic"/>
+                                <connections>
+                                    <action selector="dlrecordMerge:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ktV-AS-9Kl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合成录音" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uu1-nu-C5B">
+                                <rect key="frame" x="44" y="463" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="结束录音" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbH-aw-7tk">
+                                <rect key="frame" x="42" y="322" width="70" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时间：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXu-Jj-QnJ">
+                                <rect key="frame" x="163" y="126" width="187" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uu1-nu-C5B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="CqM-b9-eoT"/>
+                            <constraint firstItem="K5Q-2h-09Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="He9-Ok-lfV"/>
+                            <constraint firstItem="Ey2-Mo-Miu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="NAT-GS-84B"/>
+                            <constraint firstItem="pXu-Jj-QnJ" firstAttribute="leading" secondItem="K5Q-2h-09Y" secondAttribute="trailing" constant="50" id="VG9-AE-tKd"/>
+                            <constraint firstItem="eas-Ax-x2b" firstAttribute="top" secondItem="K5Q-2h-09Y" secondAttribute="bottom" constant="8" id="Xj0-3c-7er"/>
+                            <constraint firstItem="pXu-Jj-QnJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="106" id="cqg-tQ-mHL"/>
+                            <constraint firstItem="F1L-3U-25Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="fNz-Go-3zF"/>
+                            <constraint firstItem="Ey2-Mo-Miu" firstAttribute="top" secondItem="eas-Ax-x2b" secondAttribute="bottom" constant="41" id="k9S-CK-eOS"/>
+                            <constraint firstItem="K5Q-2h-09Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="n0l-I2-Igt"/>
+                            <constraint firstItem="F1L-3U-25Q" firstAttribute="top" secondItem="SbH-aw-7tk" secondAttribute="bottom" constant="40" id="nIh-4J-5Lr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pXu-Jj-QnJ" secondAttribute="trailing" constant="25" id="qgz-fC-4t9"/>
+                            <constraint firstItem="SbH-aw-7tk" firstAttribute="top" secondItem="Ey2-Mo-Miu" secondAttribute="bottom" constant="8" id="tIE-iq-WSf"/>
+                            <constraint firstItem="uu1-nu-C5B" firstAttribute="top" secondItem="F1L-3U-25Q" secondAttribute="bottom" constant="8" id="x5e-NG-dbH"/>
+                            <constraint firstItem="SbH-aw-7tk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="x83-oe-vOc"/>
+                            <constraint firstItem="eas-Ax-x2b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="ypT-WV-qIw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="dlrecordbeginTime" destination="pXu-Jj-QnJ" id="4PR-YR-08N"/>
+                        <outlet property="dlstartAStopRecordBtn" destination="K5Q-2h-09Y" id="SOX-9l-aNh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dlaudiorecord" width="200" height="200"/>
+        <image name="dlendrecord" width="201" height="200"/>
+        <image name="dlsynthetic" width="200" height="200"/>
+    </resources>
+</document>
